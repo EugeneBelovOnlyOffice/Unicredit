@@ -25,7 +25,7 @@ for (int i = 0; i < qadBankArray.Length; i++)
         singleOrderArray[2] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[23];//Номер документа	DocNumber	1002	Да	N5
         singleOrderArray[3] = _ = Methods.Class1.ConvertPaymentMethod(Methods.Class1.ParseString(qadBankArray[i], 110)[75]);//Тип передачи документа	SendType	Электронно	Да	=‘ ’|Электронно |Почтой |Телеграфом
         singleOrderArray[4] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[8];//Сумма платежа	Amount	88.23	Да	N11.N2
-        singleOrderArray[5] = _ = Methods.Class1.ConvertLearAccount(Methods.Class1.ParseString(qadBankArray[i], 110)[6]);//Счет отправителя	PayerAccount	40702810488881200001	Да	N!20
+        singleOrderArray[5] = _ = Methods.Class1.ConvertLearAccount(Methods.Class1.ParseString(qadBankArray[i], 110)[10]);//Счет отправителя	PayerAccount	40702810488881200001	Да	N!20
         singleOrderArray[6] = _ = Methods.Class1.ConvertTaxNum(Methods.Class1.ParseString(qadBankArray[i], 110)[7]);//ИНН отправителя	PayerINN	555555555555	Да	N!10
         singleOrderArray[7] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[42];//Счет получателя	BeneficiaryAccount	40702810538170000001	Да	N!20
         singleOrderArray[8] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[43] + Methods.Class1.ParseString(qadBankArray[i], 110)[44] + Methods.Class1.ParseString(qadBankArray[i], 110)[45] + Methods.Class1.ParseString(qadBankArray[i], 110)[46]; ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160
@@ -68,7 +68,7 @@ for (int i = 0; i < qadBankArray.Length; i++)
         singleOrderArray[2] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[23];//Номер документа	DocNumber	1002	Да	N5
         singleOrderArray[3] = _ = Methods.Class1.ConvertPaymentMethod(Methods.Class1.ParseString(qadBankArray[i], 110)[75]);//Тип передачи документа	SendType	Электронно	Да	=‘ ’|Электронно |Почтой |Телеграфом
         singleOrderArray[4] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[8];//Сумма платежа	Amount	88.23	Да	N11.N2
-        singleOrderArray[5] = _ = Methods.Class1.ConvertLearAccount(Methods.Class1.ParseString(qadBankArray[i], 110)[6]);//Счет отправителя	PayerAccount	40702810488881200001	Да	N!20
+        singleOrderArray[5] = _ = Methods.Class1.ConvertLearAccount(Methods.Class1.ParseString(qadBankArray[i], 110)[10]);//Счет отправителя	PayerAccount	40702810488881200001	Да	N!20
         singleOrderArray[6] = _ = Methods.Class1.ConvertTaxNum(Methods.Class1.ParseString(qadBankArray[i], 110)[7]);//ИНН отправителя	PayerINN	555555555555	Да	N!10
         singleOrderArray[7] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[42];//Счет получателя	BeneficiaryAccount	40702810538170000001	Да	N!20
         singleOrderArray[8] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[43] + Methods.Class1.ParseString(qadBankArray[i], 110)[44] + Methods.Class1.ParseString(qadBankArray[i], 110)[45] + Methods.Class1.ParseString(qadBankArray[i], 110)[46]; ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160

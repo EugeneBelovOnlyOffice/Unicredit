@@ -144,9 +144,13 @@ namespace Methods
         public static string ConvertLearAccount(string qadLearAccount)
 
         {
-            if (qadLearAccount != null)
+            if (qadLearAccount == "014609662")
             {
                 return "40702810800014609662";
+            }
+            else if (qadLearAccount == "454847026")
+            {
+                return "40702810100454847026";
             }
             return "";
 
