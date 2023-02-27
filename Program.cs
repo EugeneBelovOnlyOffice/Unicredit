@@ -1,10 +1,7 @@
 ﻿Console.WriteLine("Unicredit");
 
 
-
 string[] qadBankArray = (Methods.Class1.ReadFile()).SkipLast(1).ToArray();
-
-
 
 
 string[] multiOrderArray = new string[qadBankArray.Length];
@@ -31,7 +28,7 @@ for (int i = 0; i < qadBankArray.Length; i++)
         singleOrderArray[8] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[43] + Methods.Class1.ParseString(qadBankArray[i], 110)[44] + Methods.Class1.ParseString(qadBankArray[i], 110)[45] + Methods.Class1.ParseString(qadBankArray[i], 110)[46]; ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160
         singleOrderArray[9] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[51];//ИНН получателя	BeneficiaryINN	7707999999	Да	N12
         singleOrderArray[10] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[49];//БИК банка получателя	BeneficiaryBankBIK	044525225	Да	N!9
-        singleOrderArray[11] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[70] + Methods.Class1.ParseString(qadBankArray[i], 110)[71] + Methods.Class1.ParseString(qadBankArray[i], 110)[72];//Назначение платежа	Ground	{VO20050} Оплата по счету 16 от 11.01.2021 г. за консультационные услуги. НДС не облагается	Да	A210
+        singleOrderArray[11] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[70] + Methods.Class1.ParseString(qadBankArray[i], 110)[71] + Methods.Class1.ParseString(qadBankArray[i], 110)[72]+ Methods.Class1.ParseString(qadBankArray[i], 110)[73];//Назначение платежа	Ground	{VO20050} Оплата по счету 16 от 11.01.2021 г. за консультационные услуги. НДС не облагается	Да	A210
         singleOrderArray[12] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[52];//13	Очередность платежа	PaymentUrgency	4	Да	N2
                                                                                         // singleOrderArray[13] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[83];//Статус (поле 101)	Fiscal101	01	Налоговый	N!2
                                                                                         // singleOrderArray[14] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[81];//КПП плательщика	Fiscal102	773333333	Налоговый	N!9
