@@ -56,7 +56,7 @@ namespace Methods
         {
 
             {
-                await File.WriteAllLinesAsync("unicredit.tsv", lines);
+                await File.WriteAllLinesAsync("unicredit.tsv", lines, System.Text.Encoding.UTF8);
 
             }
         }
