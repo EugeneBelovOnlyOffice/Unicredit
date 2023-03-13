@@ -163,7 +163,6 @@ namespace Methods
       
         }
     }
-    internal class Class2
-    { }
+   
 }
 
