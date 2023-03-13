@@ -1,6 +1,7 @@
-﻿
+﻿using System.Text.RegularExpressions;
 
 namespace Methods
+
 {
     internal class Class1
     {
@@ -65,7 +66,7 @@ namespace Methods
 
             {
                 System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-               
+
                 return File.ReadAllLines("unicredit.txt", System.Text.Encoding.GetEncoding("windows-1251"));
 
             }
@@ -113,18 +114,18 @@ namespace Methods
         }
         public static string ConvertCurrency(string qadCurrency)
         {
-            if (qadCurrency !=null)
+            if (qadCurrency != null)
             {
                 return "rubPayment";
             }
-           
+
 
             return "";
 
         }
         public static string ConvertPaymentMethod(string PaymentMethod)
         {
-            if (PaymentMethod !=null)
+            if (PaymentMethod != null)
             {
                 return "Электронно";
             }
@@ -134,7 +135,7 @@ namespace Methods
         public static string ConvertTaxNum(string qadTaxNum)
 
         {
-            if (qadTaxNum !=null)
+            if (qadTaxNum != null)
             {
                 return "5256029449";
             }
@@ -155,5 +156,12 @@ namespace Methods
             return "";
 
         }
+        public static string ClearNonUTF8(string nonUTF8String)
+        {
+
+            return Regex.Replace(nonUTF8String, @"[\u00A0\u2007\u202F\u2060\u00ab]+", string.Empty);
+      
+        }
     }
 }
+
