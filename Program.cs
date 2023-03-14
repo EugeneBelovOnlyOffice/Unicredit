@@ -98,21 +98,21 @@ for (int i = 0; i < qadBankArray.Length; i++)
             singleOrderArrayEFT[3] = _ = ""; //Срочность платежа 
             singleOrderArrayEFT[4] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[8];//Сумма платежа
             singleOrderArrayEFT[5] = _ =  Methods.Class1.ParseString(qadBankArray[i], 110)[7];//Код валюты платежа
-            singleOrderArrayEFT[6] = _ = "";//Счёт Плательщика 010004882
+            singleOrderArrayEFT[6] = _ = Methods.Currency.ConvertLearAccount(Methods.Class1.ParseString(qadBankArray[i], 110)[10]);//Счёт Плательщика 010004882
             singleOrderArrayEFT[7] = _ =  Methods.Class1.ParseString(qadBankArray[i], 110)[42];//Счёт бенефициара
             singleOrderArrayEFT[8] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[43];//Наименование Бенефициара
             singleOrderArrayEFT[9] = _ = "";//Код страны Бенефициара не заполняем
             singleOrderArrayEFT[10] = _ = "";//Адрес (улица, дом) Бенефициара не заполняем
             singleOrderArrayEFT[11] = _ = "";//Город Бенефициара не заполняем
-            singleOrderArrayEFT[12] = _ = "";//SWIFT-код Банка Бенефициара AGRIFRPP847
-            singleOrderArrayEFT[13] = _ = "";//Наименование Банка Бенефициара CREDIT AGRICOLE
+            singleOrderArrayEFT[12] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[49]; //SWIFT-код Банка Бенефициара AGRIFRPP847
+            singleOrderArrayEFT[13] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[53];//Наименование Банка Бенефициара CREDIT AGRICOLE
             singleOrderArrayEFT[14] = _ = "";//Счёт Банка Бенефициара в Банке-посреднике не заполняем
-            singleOrderArrayEFT[15] = _ = "";//Код страны Банка Бенефициара подтягивается автомотически
-            singleOrderArrayEFT[16] = _ = "";//Адрес Банка Бенефициара La Garde-Route de Paris, Nantes
+            singleOrderArrayEFT[15] = _ = "";//Код страны Банка Бенефициара подтягивается автоматически
+            singleOrderArrayEFT[16] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[54]+ Methods.Class1.ParseString(qadBankArray[i], 110)[55]+ Methods.Class1.ParseString(qadBankArray[i], 110)[56];//Адрес Банка Бенефициара La Garde-Route de Paris, Nantes
             singleOrderArrayEFT[17] = _ = "";//SWIFT-код Банка-посредника не указываем
             singleOrderArrayEFT[18] = _ =  Methods.Class1.ClearNonUTF8(Methods.Class1.ParseString(qadBankArray[i], 110)[70] + Methods.Class1.ParseString(qadBankArray[i], 110)[71] + Methods.Class1.ParseString(qadBankArray[i], 110)[72] + Methods.Class1.ParseString(qadBankArray[i], 110)[73]);//Назначение платежа
-            singleOrderArrayEFT[19] = _ = "";//Тип списания комиссии RUR
-            singleOrderArrayEFT[20] = _ = "";//Счёт списания комиссии 40702810800014609662
+            singleOrderArrayEFT[19] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[20];//Тип списания комиссии OUR
+            singleOrderArrayEFT[20] = _ = Methods.Currency.ConvertChargeLearAccount();//Счёт списания комиссии 40702810800014609662
             singleOrderArrayEFT[21] = _ = "";//Дополнительные инструкции
             singleOrderArrayEFT[22] = _ = ""; //Референс из сторонней системы (Строка для совместимости с предыдущей версией формата)
 
