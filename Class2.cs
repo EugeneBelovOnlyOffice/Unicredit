@@ -26,5 +26,17 @@ namespace Methods
             return "40702810800014609662";
 
         }
+
+        public static string ConvertCurrency(string qadCurrency)
+        {
+            if (qadCurrency != null)
+            {
+                return "curPayment";
+            }
+
+
+            return "";
+
+        }
     }
 }

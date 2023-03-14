@@ -92,7 +92,7 @@ for (int i = 0; i < qadBankArray.Length; i++)
 
             ///// Currency В этой секции мы соотносим переменные из массива QAD с Unicredit файлом
 
-            singleOrderArrayEFT[0] = _ = Methods.Class1.ConvertCurrency(Methods.Class1.ParseString(qadBankArray[i], 110)[7]); //Тип документа	DocType	rubPayment	Да	rubPayment
+            singleOrderArrayEFT[0] = _ = Methods.Currency.ConvertCurrency(Methods.Class1.ParseString(qadBankArray[i], 110)[7]); //Тип документа	DocType	rubPayment	Да	rubPayment
             singleOrderArrayEFT[1] = _ = Methods.Class1.ConvertDate(Methods.Class1.ParseString(qadBankArray[i], 110)[2]);//Дата документа	DocDate	11.01.2021	Да	N!2.N!2.N!4 (DD.MM.YYYY)
             singleOrderArrayEFT[2] = _ = Methods.Class1.ParseString(qadBankArray[i], 110)[23];//Номер документа	DocNumber	1002	Да	N5
             singleOrderArrayEFT[3] = _ = ""; //Срочность платежа 
