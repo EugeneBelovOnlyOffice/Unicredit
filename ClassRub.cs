@@ -3,7 +3,7 @@
 namespace Methods
 
 {
-    internal class Class1
+    internal class ClassRub
     {
         public static void WriteString(string parsedSymbol, int parsedCount)
         {

@@ -2,7 +2,7 @@
 namespace Methods
 {
 
-    internal class Currency
+    internal class ClassCurrency
     {
         public static string ConvertLearAccount(string qadLearAccount)
         {
