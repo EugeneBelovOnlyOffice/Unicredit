@@ -159,7 +159,7 @@ namespace Methods
         public static string ClearNonUTF8(string nonUTF8String)
         {
 
-            return Regex.Replace(nonUTF8String, @"[\u00A0\u2007\u202F\u2060\u00ab]+", string.Empty);
+            return Regex.Replace(nonUTF8String, @"[\u00A0\u2007\u202F\u2060\u00ab\u2019]+", string.Empty);
       
         }
     }

@@ -30,7 +30,7 @@ for (int i = 0; i < qadBankArray.Length; i++)
                 singleOrderArrayDFT[5] = _ = Methods.ClassRub.ConvertLearAccount(Methods.ClassRub.ParseString(qadBankArray[i], 110)[10]);//Счет отправителя	PayerAccount	40702810488881200001	Да	N!20
                 singleOrderArrayDFT[6] = _ = Methods.ClassRub.ConvertTaxNum(Methods.ClassRub.ParseString(qadBankArray[i], 110)[7]);//ИНН отправителя	PayerINN	555555555555	Да	N!10
                 singleOrderArrayDFT[7] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[42];//Счет получателя	BeneficiaryAccount	40702810538170000001	Да	N!20
-                singleOrderArrayDFT[8] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[43] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[44] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[45] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[46]; ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160
+                singleOrderArrayDFT[8] = _ = Methods.ClassRub.ClearNonUTF8(Methods.ClassRub.ParseString(qadBankArray[i], 110)[43] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[44] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[45] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[46]) ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160
                 singleOrderArrayDFT[9] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[51];//ИНН получателя	BeneficiaryINN	7707999999	Да	N12
                 singleOrderArrayDFT[10] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[49];//БИК банка получателя	BeneficiaryBankBIK	044525225	Да	N!9
                 singleOrderArrayDFT[11] = _ = Methods.ClassRub.ClearNonUTF8(Methods.ClassRub.ParseString(qadBankArray[i], 110)[70] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[71] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[72] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[73]);//Назначение платежа	Ground	{VO20050} Оплата по счету 16 от 11.01.2021 г. за консультационные услуги. НДС не облагается	Да	A210
@@ -60,7 +60,7 @@ for (int i = 0; i < qadBankArray.Length; i++)
                 singleOrderArrayDFT[5] = _ = Methods.ClassRub.ConvertLearAccount(Methods.ClassRub.ParseString(qadBankArray[i], 110)[10]);//Счет отправителя	PayerAccount	40702810488881200001	Да	N!20
                 singleOrderArrayDFT[6] = _ = Methods.ClassRub.ConvertTaxNum(Methods.ClassRub.ParseString(qadBankArray[i], 110)[7]);//ИНН отправителя	PayerINN	555555555555	Да	N!10
                 singleOrderArrayDFT[7] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[42];//Счет получателя	BeneficiaryAccount	40702810538170000001	Да	N!20
-                singleOrderArrayDFT[8] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[43] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[44] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[45] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[46]; ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160
+                singleOrderArrayDFT[8] = _ = Methods.ClassRub.ClearNonUTF8(Methods.ClassRub.ParseString(qadBankArray[i], 110)[43] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[44] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[45] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[46]) ;//Имя получателя	BeneficiaryName	ЗАО «Получатель»	Да	A160
                 singleOrderArrayDFT[9] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[51];//ИНН получателя	BeneficiaryINN	7707999999	Да	N12
                 singleOrderArrayDFT[10] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[49];//БИК банка получателя	BeneficiaryBankBIK	044525225	Да	N!9
                 singleOrderArrayDFT[11] = _ = Methods.ClassRub.ClearNonUTF8(Methods.ClassRub.ParseString(qadBankArray[i], 110)[70] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[71] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[72] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[73]);//Назначение платежа	Ground	{VO20050} Оплата по счету 16 от 11.01.2021 г. за консультационные услуги. НДС не облагается	Да	A210
@@ -100,10 +100,10 @@ for (int i = 0; i < qadBankArray.Length; i++)
             singleOrderArrayEFT[5] = _ =  Methods.ClassRub.ParseString(qadBankArray[i], 110)[7];//Код валюты платежа
             singleOrderArrayEFT[6] = _ = Methods.ClassCurrency.ConvertLearAccount(Methods.ClassRub.ParseString(qadBankArray[i], 110)[10]);//Счёт Плательщика 010004882
             singleOrderArrayEFT[7] = _ =  Methods.ClassRub.ParseString(qadBankArray[i], 110)[42];//Счёт бенефициара
-            singleOrderArrayEFT[8] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[43];//Наименование Бенефициара
+            singleOrderArrayEFT[8] = _ = Methods.ClassRub.ClearNonUTF8(Methods.ClassRub.ParseString(qadBankArray[i], 110)[43]);//Наименование Бенефициара
             singleOrderArrayEFT[9] = _ = "";//Код страны Бенефициара не заполняем
-            singleOrderArrayEFT[10] = _ = "";//Адрес (улица, дом) Бенефициара не заполняем
-            singleOrderArrayEFT[11] = _ = "";//Город Бенефициара не заполняем
+            singleOrderArrayEFT[10] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[45] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[46] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[47]; //Адрес (улица, дом) Бенефициара не заполняем
+            singleOrderArrayEFT[11] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[45] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[46] + Methods.ClassRub.ParseString(qadBankArray[i], 110)[47]; ;//Город Бенефициара не заполняем
             singleOrderArrayEFT[12] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[49]; //SWIFT-код Банка Бенефициара AGRIFRPP847
             singleOrderArrayEFT[13] = _ = Methods.ClassRub.ParseString(qadBankArray[i], 110)[53];//Наименование Банка Бенефициара CREDIT AGRICOLE
             singleOrderArrayEFT[14] = _ = "";//Счёт Банка Бенефициара в Банке-посреднике не заполняем
